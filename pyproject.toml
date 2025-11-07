@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligotools"
+authors = [
+  { name = "Ligo Scientific Collaboration (LSC)" },
+  { name = "Halasya Malladi" }
+]
+description = "Tools for analyzing LIGO gravitational-wave data"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "h5py"
+]
+
+license = "BSD-3-Clause"
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["ligotools"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ligotools.__version__" }

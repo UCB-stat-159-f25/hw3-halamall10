@@ -1,0 +1,19 @@
+# Jupyter & pytest
+.ipynb_checkpoints/
+.pytest_cache/
+
+# MyST / site outputs
+_build/
+.myst/
+
+# Media generated locally
+figures/
+audio/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Envs (never commit env folders)
+.env/
+.venv/

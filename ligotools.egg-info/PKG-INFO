@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ligotools
+Version: 0.1.0
+Summary: Tools for analyzing LIGO gravitational-wave data
+Author: Ligo Scientific Collaboration (LSC), Halasya Malladi
+License-Expression: BSD-3-Clause
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: h5py
+
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/wOo27OxG)

@@ -1,0 +1,14 @@
+version: 1
+
+project:
+  title: "HW 3 - Gravitational Wave Event"
+  author: "Halasya Malladi"
+  license: CC-BY-4.0
+
+site:
+  template: book-theme   # <- valid template
+  nav:
+    - index.md
+    - LOSC_Event_tutorial.ipynb
+
+
