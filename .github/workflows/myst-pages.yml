@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -20,29 +20,27 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      # Some MyST builds need Node for the theme/tooling
+      # Install Node for the MyST CLI
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install mystmd
-        run: pip install -U mystmd
-
-      - name: Set BASE_URL (repo name = /hw3-halamall10)
-        run: echo "BASE_URL=/hw3-halamall10" >> $GITHUB_ENV
-
-      - name: Build MyST site
-        run: myst build --html
-
-      - name: Ensure index.html exists
+      # Install the MyST CLI (this gives us the 'myst' command)
+      - name: Install MyST CLI
         run: |
-          ls -la _build/site
-          test -f _build/site/index.html
+          npm install -g mystmd
+          myst --version
 
+      # Build the site into _build/site, with correct base URL
+      - name: Build MyST site
+        env:
+          BASE_URL: /hw3-halamall10/
+        run: |
+          myst build --html
+          echo "Built files in _build/site:"
+          ls -R _build/site
+
+      # Upload built site as artifact for GitHub Pages
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

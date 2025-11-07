@@ -1,17 +1,17 @@
 version: 1
 
 project:
-  title: HW3 — LIGO Tutorial (MyST)
+  title: HW3 — LIGO Tutorial (STAT 159)
 
 site:
   template: site
   title: HW3 — LIGO Tutorial
-  # MyST reads BASE_URL from env; do not hardcode baseurl here
 
 nav:
-  - index.md
-  - hw03_description.md
-  - LOSC_Event_tutorial.ipynb
+  - file: index.md
+  - file: hw03_description.md
+  - file: LOSC_Event_tutorial.ipynb
+
 
 
 
