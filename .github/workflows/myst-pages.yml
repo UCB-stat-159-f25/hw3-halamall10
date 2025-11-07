@@ -29,13 +29,13 @@ jobs:
 
       - name: Build MyST site
         env:
-          BASE_URL: /hw3-halamall10/   # <<< IMPORTANT
-        run: myst build --html          # outputs to _build/site/
+          BASE_URL: /hw3-halamall10/     
+        run: myst build --html           
 
-      - name: Upload artifact
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/site             # <<< IMPORTANT
+          path: _build/site          
 
   deploy:
     needs: build
