@@ -1,20 +1,3 @@
-name: Build & Deploy MyST to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,22 +10,18 @@ jobs:
       - name: Install mystmd
         run: pip install mystmd
 
+      - name: Set BASE_URL (repo-relative)
+        run: echo "BASE_URL=/${{ github.event.repository.name }}" >> $GITHUB_ENV
+
       - name: Build MyST site
-        env:
-          BASE_URL: /hw3-halamall10/     
-        run: myst build --html           
+        run: myst build --html --base-url "$BASE_URL"
+
+      - name: List built files (sanity check)
+        run: |
+          echo "Top level of _build/site:"
+          ls -la _build/site
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/site          
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          path: _build/site
