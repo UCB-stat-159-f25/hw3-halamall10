@@ -1,14 +1,17 @@
 version: 1
 
 project:
-  title: "HW 3 - Gravitational Wave Event"
-  author: "Halasya Malladi"
-  license: CC-BY-4.0
+  title: HW3 — LIGO Tutorial (MyST)
 
 site:
-  template: book-theme   # <- valid template
-  nav:
-    - index.md
-    - LOSC_Event_tutorial.ipynb
+  template: site
+  title: HW3 — LIGO Tutorial
+  # MyST reads BASE_URL from env; do not hardcode baseurl here
+
+nav:
+  - index.md
+  - hw03_description.md
+  - LOSC_Event_tutorial.ipynb
+
 
 

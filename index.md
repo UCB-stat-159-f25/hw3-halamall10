@@ -1,12 +1,7 @@
-# LIGO HW3 — MyST Website
+# Homework 3 — LIGO Tutorial
 
-Launch the live notebook on Binder:
+This is a minimal MyST site for the assignment.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](
-https://mybinder.org/v2/gh/halamall10/hw3-halamall10/HEAD?labpath=LOSC_Event_tutorial.ipynb
-)
-
-This site includes:
-- A landing page
-- The LOSC Event Tutorial notebook
+- Open the notebook: [LOSC_Event_tutorial.ipynb](./LOSC_Event_tutorial.ipynb)
+- Assignment notes: [hw03_description.md](./hw03_description.md)
 
