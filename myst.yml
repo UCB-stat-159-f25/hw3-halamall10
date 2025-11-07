@@ -1,7 +1,7 @@
 version: 1
 
 project:
-  title: HW3 — LIGO Tutorial (STAT 159)
+  title: HW3 — LIGO Tutorial (STAT 159/259)
 
 site:
   template: site
@@ -11,6 +11,7 @@ nav:
   - file: index.md
   - file: hw03_description.md
   - file: LOSC_Event_tutorial.ipynb
+
 
 
 
