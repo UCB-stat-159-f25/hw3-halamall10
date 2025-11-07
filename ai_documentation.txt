@@ -1,0 +1,4 @@
+Tool: ChatGPT (GPT-5 Thinking), 2025-11-06
+Purpose: Help structure tests for readligo and utils; fix myst.yml nav; 
+Output used: Adopted test skeleton; rewrote assertions; changed tmpdir handling
+Validation: Ran `pytest ligotools -q` until 5 passed; confirmed site builds locally
