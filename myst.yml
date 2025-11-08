@@ -1,16 +1,43 @@
+# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
 
 project:
-  title: HW3 — LIGO Tutorial (STAT 159/259)
+  id: d87e5613-3dde-4e16-b862-4237cde0e1a2
+  title: "Homework 3 — LIGO Tutorial"
+  description: "STAT 159/259 HW3 submission by Halasya Malladi."
+  keywords: []
+  authors:
+    - "Ligo Scientific Collaboration (LSC)"
+    - "Halasya Malladi"
+  github: https://github.com/UCB-stat-159-f25/hw3-halamall10
+  exclude:
+    - README.md
+    - hw03_description.md
+    - ligotools/README.md
+    - .github
+    - _build
+    - ligotools.egg-info
+
+  # Table of contents (what shows up as tabs/pages in the site)
+  toc:
+    # Landing page with description + Binder badge
+    - file: index.md
+
+    # The main notebook page
+    - file: LOSC_Event_tutorial.ipynb
+
+    # Direct Binder link as its own tab
+    - url: "https://mybinder.org/v2/gh/UCB-stat-159-f25/hw3-halamall10/HEAD?urlpath=%2Fdoc%2Ftree%2FLOSC_Event_tutorial.ipynb"
+      title: "Binder"
 
 site:
-  template: site
-  title: HW3 — LIGO Tutorial
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
 
-nav:
-  - file: index.md
-  - file: hw03_description.md
-  - file: LOSC_Event_tutorial.ipynb
+
+
 
 
 
